@@ -7,7 +7,7 @@
 <meta name="description" content="Resultados del Diagnóstico Integral de Aprendizajes, Monitoreo Intermedio 2026, Escuela Kallfü Mapu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --font-anthropic-sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -77,9 +77,8 @@ window.__DIA_DATA__ = {"niveles":[{"asignatura":"Lectura","curso":"2° A","estud
   var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(run, 150); });
 })();
 </script>
-</head>
-<body>
-<main id="dash-root">
+<link rel="icon" type="image/png" href="assets/insignia.png">
+<meta name="theme-color" content="#234779">
 <style>
 .dia{position:relative;font-family:var(--font-anthropic-sans);display:flex;flex-direction:column;gap:var(--cds-gap-lg);font-variant-numeric:tabular-nums}
 .dia [data-dash-source-state=refreshing]{opacity:.5;transition:opacity var(--cds-dur-slow)}
@@ -169,26 +168,41 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
 .dia-fail{display:flex;align-items:center;justify-content:center;gap:8px;min-height:inherit;height:100%;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
 .dia-fail::before{content:"";width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)}
 </style>
+<link rel="stylesheet" href="css/design.css">
+<script>try{if(sessionStorage.getItem('kallfu-theme')==='oscuro')document.documentElement.dataset.theme='dark';}catch(e){}</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<main id="dash-root">
+
 
 <div class="dia">
+  <aside class="dia-sidebar" aria-label="Panel DIA Kallfü Mapu">
+    <div class="brand"><a class="brand-home" href="#resumen" aria-label="Kallfü Mapu · ir al resumen"><img src="assets/insignia.png" alt="" width="52" height="66"><span class="brand-text"><small>ESCUELA INTERCULTURAL</small><strong>Kallfü Mapu</strong><span>Unidad Técnico Pedagógica</span></span></a><button id="menu-toggle" class="mobile-toggle" aria-label="Abrir navegación" aria-controls="sidebar-panel" aria-expanded="false" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+    <div class="sidebar-panel" id="sidebar-panel">
+      <div class="nav-label">MONITOREO DE APRENDIZAJES</div><nav class="dia-tabs" role="tablist" aria-label="Secciones" aria-orientation="vertical"><button class="dia-tab" role="tab" id="tab-resumen" data-tab="resumen" aria-controls="resumen" aria-selected="true" tabindex="0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Resumen general<small>Una mirada a la escuela</small></span><span class="nav-arrow" aria-hidden="true">›</span></button><button class="dia-tab" role="tab" id="tab-lectura" data-tab="lectura" aria-controls="lectura" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v15M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></svg><span>Lectura<small>Aprendizajes y habilidades</small></span><span class="nav-arrow" aria-hidden="true">›</span></button><button class="dia-tab" role="tab" id="tab-matematica" data-tab="matematica" aria-controls="matematica" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 10h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/></svg><span>Matemática<small>Aprendizajes y ejes temáticos</small></span><span class="nav-arrow" aria-hidden="true">›</span></button><button class="dia-tab" role="tab" id="tab-socioemocional" data-tab="socioemocional" aria-controls="socioemocional" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><span>Socioemocional<small>Bienestar y formación integral</small></span><span class="nav-arrow" aria-hidden="true">›</span></button></nav>
+      <div class="sidebar-community"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v15M3 4c3-1 6-1 9 1 3-2 6-2 9-1v15c-3-1-6-1-9 1-3-2-6-2-9-1z"/></svg><p>Comprender los resultados para <strong>acompañar los aprendizajes.</strong></p><a href="https://loancorread.github.io/kallfumapu/">Ver trayectoria educativa <span aria-hidden="true">↗</span></a></div>
+      <div class="sidebar-footer"><span class="year-status"><i></i>Año lectivo 2026 · DIA Intermedio</span><button class="dia-theme" id="tema" type="button" aria-pressed="false" title="Cambiar entre modo claro y oscuro"><span class="ic" aria-hidden="true">☾</span><span class="lbl">Modo oscuro</span></button></div>
+    </div>
+  </aside>
+  <div class="dia-workspace">
+  <div class="workspace-bar"><span>Gestión académica <span class="divider">/</span> <strong>DIA Intermedio</strong> <span class="divider">/</span> <span id="workspace-section">Resumen general</span></span><span class="workspace-school">Escuela Intercultural Kallfü Mapu</span></div>
+  <div class="dia-content" id="contenido" tabindex="-1">
   <header class="dia-head" id="encabezado">
     <div class="dia-titlebar">
-      <h1>DIA Intermedio 2026 · Kallfü Mapu</h1>
-      <button class="dia-theme" id="tema" type="button" aria-pressed="false" title="Cambiar entre modo claro y oscuro"><span class="ic" aria-hidden="true">☾</span><span class="lbl">Modo oscuro</span></button>
+      <div><span class="section-eyebrow">UNIDAD TÉCNICO PEDAGÓGICA</span><span class="report-badge">MONITOREO INTERMEDIO · 2026</span><h1>Diagnóstico Integral<br class="title-break"> de Aprendizajes</h1><p class="hero-intro">Una mirada a los aprendizajes y al bienestar de nuestra comunidad educativa.</p></div>
+      
     </div>
+    <div class="insight-label">LECTURA DE LOS RESULTADOS</div>
     <p class="dia-take" id="conclusion">En Matemática, <b data-source="resumen_escuela" data-field="nivel_I" data-where="asignatura=Matemática">—</b> de las y los estudiantes evaluados (3° a 8°) está en nivel I, es decir, aún no logra los aprendizajes mínimos del nivel; en Lectura (2° a 8°) es <b data-source="resumen_escuela" data-field="nivel_I" data-where="asignatura=Lectura">—</b>. En el cuestionario socioemocional, la condición con menos respuestas favorables es <span id="low-name" data-source="se_escuela" data-field="indicador">—</span> (<b id="low-val" data-source="se_escuela" data-field="pct_rf">—</b>).</p>
     <p class="dia-note">Fuente: informes de resultados del Monitoreo Intermedio (Agencia de Calidad de la Educación). La Agencia indica que estos resultados no deben usarse para calificar ni para comparar cursos entre sí: cada curso se interpreta según lo trabajado en clases.</p>
   </header>
 
-  <nav class="dia-tabs" role="tablist" aria-label="Secciones">
-    <button class="dia-tab" role="tab" id="tab-resumen" data-tab="resumen" aria-selected="true">Resumen</button>
-    <button class="dia-tab" role="tab" id="tab-lectura" data-tab="lectura" aria-selected="false">Lectura</button>
-    <button class="dia-tab" role="tab" id="tab-matematica" data-tab="matematica" aria-selected="false">Matemática</button>
-    <button class="dia-tab" role="tab" id="tab-socioemocional" data-tab="socioemocional" aria-selected="false">Socioemocional</button>
-  </nav>
 
+
+  <div class="section-heading"><div><span class="section-eyebrow">EXPLORAR RESULTADOS</span><h2 id="section-title">Panorama de la escuela</h2></div><span id="section-caption">Lectura · Matemática · Socioemocional</span></div>
   <!-- RESUMEN -->
-  <section class="dia-page" id="resumen">
+  <section class="dia-page" role="tabpanel" aria-labelledby="tab-resumen" tabindex="0" id="resumen">
     <div class="dia-kpis" id="indicadores-clave">
       <div class="dia-card" id="kpi-lec-1"><div class="dia-kpi-label">Lectura · estudiantes en nivel I</div><div class="dia-kpi-val dash-skeleton" data-source="resumen_escuela" data-field="nivel_I" data-where="asignatura=Lectura">—</div><div class="dia-kpi-foot"><span data-source="resumen_escuela" data-field="estudiantes_nivel_I" data-where="asignatura=Lectura">—</span> de <span data-source="resumen_escuela" data-field="estudiantes" data-where="asignatura=Lectura">—</span> evaluados</div></div>
       <div class="dia-card" id="kpi-lec-3"><div class="dia-kpi-label">Lectura · estudiantes en nivel III</div><div class="dia-kpi-val dash-skeleton" data-source="resumen_escuela" data-field="nivel_III" data-where="asignatura=Lectura">—</div><div class="dia-kpi-foot"><span data-source="resumen_escuela" data-field="estudiantes_nivel_III" data-where="asignatura=Lectura">—</span> logran satisfactoriamente</div></div>
@@ -220,7 +234,7 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
   </section>
 
   <!-- LECTURA -->
-  <section class="dia-page" id="lectura" hidden>
+  <section class="dia-page" role="tabpanel" aria-labelledby="tab-lectura" tabindex="0" id="lectura" hidden>
     <div class="dia-chips" id="lectura-cursos" data-source="niveles" role="group" aria-label="Curso de Lectura"></div>
     <div class="dia-grid">
       <div class="dia-card" id="lectura-niveles-card">
@@ -259,7 +273,7 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
   </section>
 
   <!-- MATEMÁTICA -->
-  <section class="dia-page" id="matematica" hidden>
+  <section class="dia-page" role="tabpanel" aria-labelledby="tab-matematica" tabindex="0" id="matematica" hidden>
     <div class="dia-chips" id="matematica-cursos" data-source="niveles" role="group" aria-label="Curso de Matemática"></div>
     <div class="dia-grid">
       <div class="dia-card" id="matematica-niveles-card">
@@ -298,7 +312,7 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
   </section>
 
   <!-- SOCIOEMOCIONAL -->
-  <section class="dia-page" id="socioemocional" hidden>
+  <section class="dia-page" role="tabpanel" aria-labelledby="tab-socioemocional" tabindex="0" id="socioemocional" hidden>
     <div class="dia-chips" id="socio-cursos" data-source="se_indicadores" role="group" aria-label="Curso del cuestionario socioemocional"></div>
     <div class="dia-card" id="socio-indicadores-card">
       <h2>Resultado general del curso</h2>
@@ -327,6 +341,9 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
   </section>
 
   <div class="dia-tip" hidden></div>
+<p class="dia-foot">Datos: informes de resultados DIA, Monitoreo Intermedio 2026 (Agencia de Calidad de la Educación), generados el 15/08/2026. Resultados agregados por curso; no incluye datos individuales de estudiantes.</p>
+  </div>
+  </div>
 </div>
 
 <script>
@@ -388,18 +405,19 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
 
   const R = document.querySelector('.dia');
 
-  // Modo claro / oscuro: claro por defecto al abrir.
+  // Tema institucional compartido durante la sesión.
   const themeBtn = R.querySelector('#tema');
   let ready = false;
   function setTheme(t) {
     document.documentElement.setAttribute('data-theme', t);
     const dark = t === 'dark';
+    try { sessionStorage.setItem('kallfu-theme', dark ? 'oscuro' : 'claro'); } catch (_) {}
     themeBtn.setAttribute('aria-pressed', String(dark));
     themeBtn.querySelector('.ic').textContent = dark ? '☀' : '☾';
     themeBtn.querySelector('.lbl').textContent = dark ? 'Modo claro' : 'Modo oscuro';
     if (ready) draw();
   }
-  setTheme('light');
+  setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   themeBtn.addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
   const f1 = d3.format('.1f'), f2 = d3.format('.2f');
@@ -458,13 +476,37 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
   function show(id, link) {
     if (!R.querySelector('#' + id + '.dia-page')) return;
     current = id;
-    tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === id)));
+    tabs.forEach((t) => { t.setAttribute('aria-selected', String(t.dataset.tab === id)); t.tabIndex = t.dataset.tab === id ? 0 : -1; });
+    const sectionLabels = {resumen: ['Panorama de la escuela', 'Lectura · Matemática · Socioemocional'], lectura: ['Aprendizajes de Lectura', 'Seleccione un curso para explorar sus resultados'], matematica: ['Aprendizajes de Matemática', 'Seleccione un curso para explorar sus resultados'], socioemocional: ['Bienestar y formación integral', 'Seleccione un curso para explorar sus resultados']};
+    R.querySelector('#section-title').textContent = sectionLabels[id][0];
+    R.querySelector('#section-caption').textContent = sectionLabels[id][1];
+    R.querySelector('#workspace-section').textContent = tabs.find(t => t.dataset.tab === id).querySelector('span').firstChild.textContent;
+    R.querySelector('#menu-toggle').setAttribute('aria-expanded', 'false');
+    R.querySelector('#menu-toggle').setAttribute('aria-label', 'Abrir navegación');
+    R.querySelector('.dia-sidebar').classList.remove('is-open');
     R.querySelectorAll('.dia-page').forEach((p) => { p.hidden = p.id !== id; });
     tipHide();
     if (link) dash.setLink(id);
     draw();
   }
   tabs.forEach((t) => t.addEventListener('click', () => show(t.dataset.tab, true)));
+
+  const menuToggle = R.querySelector('#menu-toggle');
+  menuToggle.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Cerrar navegación' : 'Abrir navegación');
+    R.querySelector('.dia-sidebar').classList.toggle('is-open', open);
+  });
+  R.querySelector('.brand-home').addEventListener('click', () => show('resumen', true));
+  R.querySelector('.dia-tabs').addEventListener('keydown', (event) => {
+    const index = tabs.indexOf(document.activeElement);
+    if (index < 0 || !['ArrowUp', 'ArrowDown', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowDown' ? 1 : -1) + tabs.length) % tabs.length;
+    show(tabs[next].dataset.tab, true); tabs[next].focus();
+  });
+  R.addEventListener('keydown', (event) => { if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') { menuToggle.setAttribute('aria-expanded', 'false'); R.querySelector('.dia-sidebar').classList.remove('is-open'); menuToggle.focus(); } });
 
   // Legends
   R.querySelectorAll('.lv-legend').forEach((lg) => {
@@ -789,7 +831,8 @@ table.dia-t{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-ca
 })();
 </script>
 
-<p class="dia-foot">Datos: informes de resultados DIA, Monitoreo Intermedio 2026 (Agencia de Calidad de la Educación), generados el 15/08/2026. Resultados agregados por curso; no incluye datos individuales de estudiantes.</p>
+
 </main>
 </body>
 </html>
+
